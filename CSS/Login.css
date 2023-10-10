@@ -73,7 +73,7 @@ nav,
 }
 
 /* Form */
- 
+
 .from-container {
     position: absolute;
     max-width: 320px;
@@ -88,6 +88,9 @@ nav,
     box-shadow: rgba(0, 0, 0, 0.1);
 }
 
+.signup-form{
+    display: none;
+}
 .form-close {
     position: absolute;
     top: 10px;
@@ -118,7 +121,12 @@ nav,
     outline: none;
     padding: 0 30px;
     color: #333;
+    transition: all 0.2s ease;
     border-bottom: 1.5px solid #aaa;
+}
+
+.input-box input:focus {
+    border-color: #7d2ae8;
 }
 
 .input-box i {
@@ -128,8 +136,66 @@ nav,
     font-size: 20px;
 }
 
-.input-box i.email ,
-.input-box i.password{
+.input-box i.email,
+.input-box i.password {
     left: 0;
     color: #707070;
+}
+
+.input-box input:focus~i.email,
+.input-box input:focus~i.password {
+    color: #7d2ae8;
+}
+
+.input-box i.pw_hide {
+    right: 0;
+    font-size: 18px;
+}
+
+.option-field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.from-container a {
+    color: #7d2ae8;
+    font-size: 12px;
+}
+
+.from-container a:hover {
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    column-gap: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.checkbox input {
+    accent-color: #7d2ae8;
+}
+
+.checkbox label {
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+}
+
+.from-container .button{
+    background-color: #7d2ae8;
+    margin-top: 30px ;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.login-signup{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
 }
