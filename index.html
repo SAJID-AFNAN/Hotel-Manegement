@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./image/facicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 bg-blue-500">
+                <div class="flex-1">
+                    <a class="btn btn-ghost normal-case text-xl">Home</a>
+                    <a class="btn btn-ghost normal-case text-xl">About Us</a>
+                    <a class="btn btn-ghost normal-case text-xl">Booking</a>
+                    <a class="btn btn-ghost normal-case text-xl">Contact Us</a>
+                </div>
+                <div class="gap-16 p-4">
+                    <div class="flex">
+                        <input type="text" placeholder="Search here"
+                            class="input input-bordered input-accent w-full max-w-xs" />
+                        <button class="btn btn-active btn-ghost ml-2 px-5">Find</button>
+                    </div>
+                    <!-- Login/SignUp form -->
+                    <div class=" rounded-full flex">
+
+                        <div class="login-signup">
+                            <!-- You can open the modal using ID.showModal() method -->
+                            <button class="btn btn-ghost normal-case text-xl pr-2"
+                                onclick="my_modal_3.showModal()">Login/SignUp</button>
+                            <dialog id="my_modal_3" class="modal">
+                                <div class="modal-box">
+                                    <form method="dialog">
+                                        <button onclick="crossbutton()"
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                    </form>
+                                    <!-- Login Form -->
+                                    <div id="login-form" class="form login-form container h-full p-12">
+                                        <form action="#">
+                                            <h2 class="font-bold text-4xl text-center mb-8">Log in</h2>
+                                            <div class="input-box ">
+                                                <input class="p-2 w-full border-b-2 outline-none text-lg" type="email"
+                                                    placeholder="Enter Your Email" required>
+                                                <!-- <i class="uil uil-envelope-alt email relative right-72"></i> -->
+                                            </div>
+                                            <div class="input-box">
+                                                <input class="p-2 mt-8 w-full border-b-2 outline-none text-lg"
+                                                    type="password" placeholder="Enter Your Password" required>
+                                                <!-- <i class="uil uil-lock password relative right-72"></i>
+                                                <i class="uil uil-eye-slash pw_hide"></i> -->
+                                            </div>
+                                            <div class="option-field mt-4 flex justify-between text-lg">
+                                                <span class="checkbox border-none w-auto">
+                                                    <input type="checkbox" id="check">
+                                                    <label for="check">Remember me</label>
+                                                </span>
+                                                <a href="#" class="forgot-pw text-violet-700">Forgot Password?</a>
+                                            </div>
+                                            <button class="btn btn-primary w-full my-6">Login Now</button>
+                                            <div class="login-signup text-lg text-center">
+                                                Don't have an account? <a href="#" id="signup" onclick="signup()"
+                                                    class="text-violet-700">Sign Up</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- SignUp-Form -->
+                                    <div id="signup-form" class="form signup-form container h-full p-12 hidden">
+                                        <form action="#">
+                                            <h2 class="font-bold text-4xl text-center mb-8">Create New Account</h2>
+                                            <div class="input-box">
+                                                <input class="p-2 w-full border-b-2 outline-none text-lg" type="email"
+                                                    placeholder="First Name" required>
+                                                <!-- <i class="uil uil-envelope-alt email"></i> -->
+                                            </div>
+                                            <div class="input-box">
+                                                <input class="p-2 mt-8 w-full border-b-2 outline-none text-lg" type="email"
+                                                    placeholder="Last Name" required>
+                                                <!-- <i class="uil uil-envelope-alt email"></i> -->
+                                            </div>
+                                            <div class="input-box">
+                                                <input class="p-2 mt-8 w-full border-b-2 outline-none text-lg" type="email"
+                                                    placeholder="Enter Your Email" required>
+                                                <!-- <i class="uil uil-envelope-alt email"></i> -->
+                                            </div>
+                                            <div class="input-box">
+                                                <input class="p-2 mt-8 w-full border-b-2 outline-none text-lg"
+                                                    type="password" placeholder="Create Password" required>
+                                                <!-- <i class="uil uil-lock password"></i>
+                                                <i class="uil uil-eye-slash pw_hide"></i> -->
+                                            </div>
+                                            <div class="input-box">
+                                                <input class="p-2 mt-8 w-full border-b-2 outline-none text-lg"
+                                                    type="password" placeholder="Confirm Password" required>
+                                                <!-- <i class="uil uil-lock password"></i>
+                                                <i class="uil uil-eye-slash pw_hide"></i> -->
+                                            </div>
+
+                                            <button class="btn btn-primary w-full my-6">SignUp Now</button>
+                                            <div class="login-signup text-lg text-center">
+                                                Already have an account? <a class="text-violet-700" href="#" id="login"
+                                                    onclick="login()">Login</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Home / Banner Section-->
+    <section class="home">
+        <div class="carousel w-full ml-2 lg:ml-0">
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="hero h-[250px] lg:h-[600px] mx-5 lg:m-0 rounded-xl lg:rounded-none"
+                    style="background-image: url(./image/nature_00.jpeg);">
+                    <div class="hero-overlay bg-opacity-10 bg-gradient-to-b from-[#1b1b1b] ;"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-auto text-white">
+                            <h1 class="mb-5 text-2xl lg:text-7xl font-bold ">Exotic tastes at your <br> doorstep</h1>
+                            <p class="mb-5 text-sm lg:text-lg">We supply highly quality organic products</p>
+                            <button class="btn border-none text-white text-xs lg:text-sm bg-[#F85559]">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide5" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero h-[250px] lg:h-[600px] mx-5 lg:m-0 rounded-xl lg:rounded-none"
+                    style="background-image: url(./image/nature_1.webp);">
+                    <div class="hero-overlay bg-opacity-10 bg-gradient-to-b from-[#1b1b1b] ;"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-auto text-white">
+                            <h1 class="mb-5 text-2xl lg:text-7xl font-bold ">Exotic tastes at your <br> doorstep</h1>
+                            <p class="mb-5 text-sm lg:text-lg">We supply highly quality organic products</p>
+                            <button class="btn border-none text-white text-xs lg:text-sm bg-[#F85559]">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero h-[250px] lg:h-[600px] mx-5 lg:m-0 rounded-xl lg:rounded-none"
+                    style="background-image: url(./image/nature_3.jpeg);">
+                    <div class="hero-overlay bg-opacity-10 bg-gradient-to-b from-[#1f1f1f] ;"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-auto text-white">
+                            <h1 class="mb-5 text-2xl lg:text-7xl font-bold ">Exotic tastes at your <br> doorstep</h1>
+                            <p class="mb-5 text-sm lg:text-lg">We supply highly quality organic products</p>
+                            <button class="btn border-none text-white text-xs lg:text-sm bg-[#F85559]">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="hero h-[250px] lg:h-[600px] mx-5 lg:m-0 rounded-xl lg:rounded-none"
+                    style="background-image: url(./image/nature_4.jpeg);">
+                    <div class="hero-overlay bg-opacity-10 bg-gradient-to-b from-[#202020] ;"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-auto text-white">
+                            <h1 class="mb-5 text-2xl lg:text-7xl font-bold ">Exotic tastes at your <br> doorstep</h1>
+                            <p class="mb-5 text-sm lg:text-lg">We supply highly quality organic products</p>
+                            <button class="btn border-none text-white text-xs lg:text-sm bg-[#F85559]">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide5" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide5" class="carousel-item relative w-full">
+                <div class="hero h-[250px] lg:h-[600px] mx-5 lg:m-0 rounded-xl lg:rounded-none"
+                    style="background-image: url(./image/nature_5.jpeg);">
+                    <div class="hero-overlay bg-opacity-10 bg-gradient-to-b from-[#202020] ;"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-auto text-white">
+                            <h1 class="mb-5 text-2xl lg:text-7xl font-bold ">Exotic tastes at your <br> doorstep</h1>
+                            <p class="mb-5 text-sm lg:text-lg">We supply highly quality organic products</p>
+                            <button class="btn border-none text-white text-xs lg:text-sm bg-[#F85559]">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
