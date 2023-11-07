@@ -78,20 +78,6 @@ nav {
   padding: 1rem 1rem 5rem 1rem;
 }
 
-/* .header__image__container {
-  position: relative;
-  min-height: 500px;
-  background-image: linear-gradient(
-      to right,
-      rgba(44, 56, 85, 0.9),
-      rgba(100, 125, 187, 0.1)
-    ),
-    url("./image/bangladesh-1.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 2rem;
-} */
 
 .header__content {
   max-width: 600px;
@@ -112,10 +98,10 @@ nav {
 
 .booking__container {
   position: absolute;
-  bottom: -5rem;
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 11em);
+  width: calc(100% - 15em);
   display: flex;
   align-items: center;
   gap: 1rem;

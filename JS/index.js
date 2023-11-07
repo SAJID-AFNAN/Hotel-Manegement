@@ -17,3 +17,13 @@ function login(){
 function crossbutton(){
     login();
 }
+
+function home(){
+    const homeSection = document.getElementById('home-section');
+    Headers();
+
+}
+
+function hotel(){
+    hotelSection();
+}
